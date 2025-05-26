@@ -44,15 +44,17 @@ body {
 
   .leftBlock{
     margin-top: 70px;
-    margin-left: 200px;
-    width: 350px;
+    margin-left: 230px;
+    width: 300px;
     height: 400px;
     display: flex;
+    flex-direction: column;
     background-color: #393E46;
     border-radius: 35px;
     align-items: center;
-    align-self: start;
-    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
   }
 
   .rightBlock{
@@ -65,9 +67,41 @@ body {
   }
 
   .name {
-    font-weight: 375;
-     font-stretch: 60%;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--text)
   }
+
+  .location {
+    font-size: 18px;
+    color: #B8B8B8;
+    margin-bottom: 30px;
+  }
+
+  .socialLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .socialItem {
+      display: flex;
+      align-items: center;
+      padding: 12px 12px;
+      background-color: #2A2D34;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .socialIcon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
 
   footer {
     margin-top: 100px;
