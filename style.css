@@ -15,25 +15,58 @@ body {
   .navBar {
     position: fixed;
     background-color: #948979;
-    width: 99%;
+    width: 100%;
     height: 70px;
+    top: 0;
+    left: 0;
   }
 
   .navButton {
     position: fixed;
-    top: 30px;
-    right: 50px;
+    top: 15px;
+    right: 290px;
     background-color: #393E46;
-    padding: 5px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
   }
 
   .mainBlock {
     margin-top: 70px;
     width: 100%;
     display: flex;
-    justify-content: center;
     gap: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .leftBlock{
+    margin-top: 70px;
+    margin-left: 200px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    background-color: #393E46;
+    border-radius: 35px;
+    align-items: center;
+    align-self: start;
+    align-content: center;
+  }
+
+  .rightBlock{
+    margin-top: 70px;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    background-color: #393E46;
+    border-radius: 35px;
+  }
+
+  .name {
+    font-weight: 375;
+     font-stretch: 60%;
   }
 
   footer {
