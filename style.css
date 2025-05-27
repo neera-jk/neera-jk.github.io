@@ -98,11 +98,13 @@ body {
     width: 800px;
     height: 800px;
     display: flex;
+    flex-direction: column;
     background-color: #393E46;
     border-radius: 35px;
   }
 
     .aboutMe {
+      margin-top: 25px;
       margin-bottom: 50px;
     }
 
@@ -118,6 +120,57 @@ body {
       color: var(--secondary-text);
       margin-bottom: 20px;
       line-height: 1.8;
+    }
+
+    .skillsTitle {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .skillsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .skillCategory {
+      background-color: #2A2D34;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .skillCategoryTitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .skillsList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skillItem {
+      background-color: #444;
+      color: var(--text);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skillItem:hover {
+      background-color: var(--accent);
+      color: #000;
     }
 
 
