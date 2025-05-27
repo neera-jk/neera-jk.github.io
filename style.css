@@ -120,6 +120,8 @@ body {
       color: var(--secondary-text);
       margin-bottom: 20px;
       line-height: 1.8;
+      padding-left: 40px;
+      padding-right: 40px;
     }
 
     .skillsTitle {
