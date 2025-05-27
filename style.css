@@ -51,7 +51,7 @@
         margin-top: 70px;
         margin-left: 230px;
         width: 300px;
-        height: 400px;
+        height: 550px;
         display: flex;
         flex-direction: column;
         background-color: #393E46;
@@ -75,6 +75,29 @@
         margin-bottom: 30px;
       }
 
+      .resumeSection {
+        margin-bottom: 30px;
+      }
+
+      .resumeButton {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, var(--accent), #ffed4e);
+        color: #000;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      }
+
+      .resumeIcon {
+        font-size: 16px;
+      }
+
       .socialLinks {
           display: flex;
           flex-direction: column;
@@ -91,19 +114,10 @@
           transition: all 0.3s ease;
           text-decoration: none;
           color: var(--text);
-          width: 50px;
-          height: 50px;
-        }
-
-        .socialItem:hover {
-          background-color: var(--accent);
-          color: #000;
-        }
-
-        .socialIcon {
-          width: 24px;
-          height: 24px;
-          fill: currentColor;
+          width: 150px;
+          height: 40px;
+          font-size: 20px;
+          font-weight: bold;
         }
 
         .rightBlock{
