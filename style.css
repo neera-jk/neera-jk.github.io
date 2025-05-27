@@ -57,15 +57,6 @@ body {
     box-sizing: border-box;
   }
 
-  .rightBlock{
-    margin-top: 70px;
-    width: 800px;
-    height: 800px;
-    display: flex;
-    background-color: #393E46;
-    border-radius: 35px;
-  }
-
   .name {
     font-weight: 700;
     font-size: 32px;
@@ -100,6 +91,33 @@ body {
       width: 24px;
       height: 24px;
       fill: currentColor;
+    }
+
+    .rightBlock{
+    margin-top: 70px;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    background-color: #393E46;
+    border-radius: 35px;
+  }
+
+    .aboutMe {
+      margin-bottom: 50px;
+    }
+
+    .aboutMeTitle {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .aboutMeContent {
+      font-size: 16px;
+      color: var(--secondary-text);
+      margin-bottom: 20px;
+      line-height: 1.8;
     }
 
 
