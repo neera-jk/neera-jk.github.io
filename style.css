@@ -129,7 +129,8 @@
           line-height: 1.8;
           padding-left: 40px;
           padding-right: 40px;
-          text-align: left;
+          text-align: justify;
+          text-justify: auto;
         }
 
         .skillsTitle {
