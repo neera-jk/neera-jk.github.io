@@ -254,6 +254,77 @@
           padding: 0px 40px;
         }
 
+            .experienceGrid {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              gap: 20px;
+            }
+
+            .experienceCard {
+              background-color: #1e1e1f;
+              color: var(--text);
+              border-radius: 20px;
+              padding: 20px;
+              width: 70%; /* 3 in a row */
+              box-sizing: border-box;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+              transition: transform 0.3s ease;
+            }
+
+            .experienceCard:hover {
+              transform: translateY(-5px);
+            }
+
+            .experienceHeader {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            .experienceHeader h3 {
+              font-size: 20px;
+              margin: 0;
+            }
+
+            .dateRange {
+              background-color: #323235;
+              padding: 4px 10px;
+              border-radius: 12px;
+              font-size: 12px;
+              color: var(--secondary-text);
+            }
+
+            .company {
+              font-weight: bold;
+              margin-top: 10px;
+            }
+
+            .location {
+              font-size: 14px;
+              color: var(--secondary-text);
+              margin-bottom: 15px;
+            }
+
+            .description {
+              font-size: 15px;
+              color: var(--secondary-text);
+              margin-bottom: 15px;
+            }
+
+            .achievements ul {
+              padding-left: 18px;
+              font-size: 14px;
+              line-height: 1.6;
+              color: var(--secondary-text);
+            }
+
+            .achievements ul li::marker {
+              content: "→ ";
+              color: #ffd700;
+            }
+
+
       footer {
         margin-top: 100px;
         font-size: 14px;
