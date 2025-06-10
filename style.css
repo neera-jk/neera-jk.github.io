@@ -16,46 +16,105 @@
         padding: 0;
       }  
 
+      /* ===================== NAVBAR STYLES ===================== */
       .navBar {
         position: fixed;
         background-color: #2b2b2c;
         width: 100%;
-        height: 70px;
         top: 0;
         left: 0;
         z-index: 1000;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
-        box-sizing: border-box;
+        border-bottom: 1px solid #323235;
       }
 
       .navContent {
         width: 100%;
-        max-width: 1200px; 
-        padding: 0 20px;
+        max-width: 1200px;
+        padding: 10px 20px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        align-items: center;
         box-sizing: border-box;
+        transition: all 0.3s ease;
       }
-        .navButtons {
-          display: flex;
-          gap: 15px;       
-        }
-        
-        .navButton {
-          background-color: #3e3e41;
-          color: #f9f9f9;
-          padding: 7px 15px;
-          border-radius: 15px;
-          font-size: 16px;
-          cursor: pointer;
+
+      /* Logo section */
+      .navLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logoImage {
+        height: 60px;
+        object-fit: contain;
+      }
+
+      /* Button section */
+      .navButtons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .navButton {
+        background-color: #3e3e41;
+        color: #f9f9f9;
+        padding: 7px 15px;
+        border-radius: 15px;
+        font-size: 16px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background-color 0.3s ease;
+      }
+
+      .navButton:hover {
+        background-color: #252522;
+        color: #ffffff;
+      }
+
+      /* ===================== RESPONSIVE BREAKPOINT ===================== */
+      @media (max-width: 700px) {
+        .navContent {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: auto;
+          padding: 15px 10px;
+          gap: 10px;
         }
 
-        .navButton:hover {
-            background-color: #252522;
-            color: #ffffff;
+        .logoImage {
+          height: 30px;
         }
+
+        .navLogo {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .navButtons {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .navButton {
+          font-size: 14px;
+          padding: 8px 14px;
+        }
+      }
+
+      @media (min-width: 701px) {
+        .navContent {
+          height: 70px;
+        }
+      }
+
+
 
       .mainBlock {
         margin-top: 40px;
@@ -342,24 +401,3 @@
         text-align: center;
         padding: 20px;
       }
-
-      /* @media (max-width: 768px) {
-        .mainBlock {
-          flex-direction: column;
-          padding: 10px;
-        }
-        
-        .leftBlock {
-          margin-left: 0;
-          width: 100%;
-        }
-        
-        .rightBlock {
-          width: 100%;
-        }
-        
-        .skillsContainer {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-      } */
