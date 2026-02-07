@@ -13,50 +13,19 @@
   <nav class="navbar fixed-top custom-navbar">
     <div class="container-fluid" style="max-width: 1200px;">
       <div class="navbar-content">
-        <a class="navbar-brand" href="#">
-          <img src="resources/logo.png" alt="Logo" />
+        <a class="navbar-brand" href="#home">
+          <span class="navbar-name">Neeraj Kumar</span>
         </a>
         <div class="nav-buttons">
-          <a class="custom-nav-link" href="#">Home</a>
-          <a class="custom-nav-link" href="#">Resume</a>
-          <a class="custom-nav-link" href="#">Contact</a>
+          <a class="custom-nav-link" href="#home">Home</a>
+          <a class="custom-nav-link" href="#contact">Contact</a>
+          <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
         </div>
       </div>
     </div>
   </nav>
 
-  <div class="mainBlock">
-    <div class="leftBlock">
-      <div class="name">Neeraj Kumar</div>
-      
-      <div class="location">
-        <span>Boston, Massachusetts</span>
-      </div>
-
-      <div class = "socialMedia">
-        <div class = "socialLinks">
-          <a href="resources/Neeraj_Kumar_Resume.pdf" class="socialItem" target="_blank">
-            <img src="resources/resume.png" alt="Resume" class="socialIcon">
-          </a>
-          <a href="https://linkedin.com/in/-neerajkumar-" class="socialItem" target="_blank" title="LinkedIn">
-            <img src="resources/linkedin.png" alt="LinkedIn" class="socialIcon">
-          </a>
-          <a href="https://github.com/neera-jk" class="socialItem" target="_blank" title="GitHub">
-            <img src="resources/github.png" alt="GitHub" class="socialIcon">
-          </a>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-13577-4_13" class="socialItem" target="_blank" title="Research Paper">
-            <img src="resources/researchPaper.png" alt="Paper" class="socialIcon">
-          </a>
-        </div>
-        <div class = "socialName">
-          <div class="socialItemName">Resume</div>
-          <div class="socialItemName">LinkedIn</div>
-          <div class="socialItemName">Github</div>
-          <div class="socialItemName">Publication</div>
-        </div>
-      </div>
-    </div>
-
+  <div class="mainBlock" id="home">
     <div class="rightBlock">
       <div class="aboutMe">
         <div class="aboutMeTitle">About Me</div>
@@ -75,27 +44,27 @@
             <div class="skillCategoryTitle">Languages</div>
             <div class="skillsList">
               <span class="skillItem">Python</span>
-              <span class="skillItem">Java</span>
               <span class="skillItem">JavaScript</span>
-              <span class="skillItem">C</span>
-              <span class="skillItem">SQL</span>
+              <span class="skillItem">Java</span>
               <span class="skillItem">TypeScript</span>
+              <span class="skillItem">SQL</span>
               <span class="skillItem">HTML</span>
               <span class="skillItem">CSS</span>
+              <span class="skillItem">C</span>
             </div>
           </div>
           <div class="skillType">
             <div class="skillCategoryTitle">Tools & Technologies</div>
             <div class="skillsList">
-              <span class="skillItem">ReactJS</span>
-              <span class="skillItem">MySQL</span>
+              <span class="skillItem">React</span>
+              <span class="skillItem">Node.js</span>
+              <span class="skillItem">Express.js</span>
               <span class="skillItem">MongoDB</span>
-              <span class="skillItem">XAMPP</span>
-              <span class="skillItem">Selenium</span>
-              <span class="skillItem">WordPress</span>
-              <span class="skillItem">GitHub</span>
-              <span class="skillItem">JUnit</span>
+              <span class="skillItem">MySQL</span>
+              <span class="skillItem">REST APIs</span>
+              <span class="skillItem">Git/GitHub</span>
               <span class="skillItem">Figma</span>
+              <span class="skillItem">VSCode</span>
             </div>
           </div>
         </div>
@@ -104,78 +73,164 @@
       <div class="experience">
         <div class="experienceTitle">Experience</div>
 
-        <div class="experienceContainer">
-          <!-- Experience Card 1 - Latitude Health (Left aligned) -->
-          <div class="experienceCard1">
-            <div class="experienceCardHeader">
-              <div class="experienceCardHeaderTop">
-                <div class="experienceCardTitle">Software Engineering Intern</div>
-                <div class="dateRange">May 2024 – Aug 2024</div>
-              </div>
-              <div class="experienceCardHeaderBottom">
-                <div class="companyName">
-                  Latitude Health
+        <div class="experienceContainer timeline">
+          <!-- Experience Card 1 - Latitude Health -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="experienceCard">
+              <div class="experienceCardHeader">
+                <div class="experienceCardHeaderTop">
+                  <div class="experienceCardTitle">Software Engineering Intern</div>
+                  <div class="dateRange">May 2024 – Aug 2024</div>
+                </div>
+                <div class="experienceCardHeaderBottom">
+                  <div class="companyName">
+                    Latitude Health
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="expereienceCardBody">
-              <ul>
-                <li>Developed an interactive dashboard to deliver real-time clinical data to assist in prior authorization. Successfully completed the development in 2 weeks.</li>
-                <li>Designed 9+ modular React components (Tooltip, Status, Priority, etc.) enhancing modularity and reducing future dev time.</li>
-                <li>Built 5+ responsive ReactJS web pages and collaborated in Agile sprints and participated in code reviews to ensure maintainability and modularity.</li>
-              </ul>
+              <div class="expereienceCardBody">
+                <ul>
+                  <li>Developed an interactive dashboard to deliver real-time clinical data to assist in prior authorization. Successfully completed the development in 2 weeks.</li>
+                  <li>Designed 9+ modular React components (Tooltip, Status, Priority, etc.) enhancing modularity and reducing future dev time.</li>
+                  <li>Built 5+ responsive ReactJS web pages and collaborated in Agile sprints and participated in code reviews to ensure maintainability and modularity.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- Experience Card 2 - Wyoming Global (Right aligned) -->
-          <div class="experienceCard2">
-            <div class="experienceCardHeader">
-              <div class="experienceCardHeaderTop">
-                <div class="experienceCardTitle">Web Development Intern</div>
-                <div class="dateRange">Oct 2022 – Jun 2023</div>
-              </div>
-              <div class="experienceCardHeaderBottom">
-                <div class="companyName">
-                  Wyoming Global Research World Pvt. Ltd.
+          <!-- Experience Card 2 - Wyoming Global -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="experienceCard">
+              <div class="experienceCardHeader">
+                <div class="experienceCardHeaderTop">
+                  <div class="experienceCardTitle">Web Development Intern</div>
+                  <div class="dateRange">Oct 2022 – Jun 2023</div>
+                </div>
+                <div class="experienceCardHeaderBottom">
+                  <div class="companyName">
+                    Wyoming Global Research World Pvt. Ltd.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="expereienceCardBody">
-              <ul>
-                <li>Engineered a conversational chatbot using diverse front-end development plugins, conducting comparative across 3 models for ease of creation, usability, and responsiveness.</li>
-                <li>Developed a specialized content-driven chatbot leveraging the ChatGPT plugin (AI Engine).</li>
-                <li>Drove web and content development initiatives for educational institutions enhancing user experience.</li>
-              </ul>
+              <div class="expereienceCardBody">
+                <ul>
+                  <li>Engineered a conversational chatbot using diverse front-end development plugins, conducting comparative across 3 models for ease of creation, usability, and responsiveness.</li>
+                  <li>Developed a specialized content-driven chatbot leveraging the ChatGPT plugin (AI Engine).</li>
+                  <li>Drove web and content development initiatives for educational institutions enhancing user experience.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- Experience Card 3 - Cognizant (Left aligned) -->
-          <div class="experienceCard3">
-            <div class="experienceCardHeader">
-              <div class="experienceCardHeaderTop">
-                <div class="experienceCardTitle">Software Intern</div>
-                <div class="dateRange">Apr 2022 – Aug 2022</div>
-              </div>
-              <div class="experienceCardHeaderBottom">
-                <div class="companyName">
-                  Cognizant
+          <!-- Experience Card 3 - Cognizant -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="experienceCard">
+              <div class="experienceCardHeader">
+                <div class="experienceCardHeaderTop">
+                  <div class="experienceCardTitle">Software Intern</div>
+                  <div class="dateRange">Apr 2022 – Aug 2022</div>
+                </div>
+                <div class="experienceCardHeaderBottom">
+                  <div class="companyName">
+                    Cognizant
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="expereienceCardBody">
-              <ul>
-                <li>Worked in a team of 6 to design and test the landing page of Cognizant, leveraging Java with Selenium for functional testing and utilizing HTML, SQL, Databases, CSS, and XPath for development and validation.</li>
-                <li>Gained familiarity in SDLC, and contributed in development, testing, integration, and deployment phases across 3 projects over a duration of 3 months.</li>
-              </ul>
+              <div class="expereienceCardBody">
+                <ul>
+                  <li>Worked in a team of 6 to design and test the landing page of Cognizant, leveraging Java with Selenium for functional testing and utilizing HTML, SQL, Databases, CSS, and XPath for development and validation.</li>
+                  <li>Gained familiarity in SDLC, and contributed in development, testing, integration, and deployment phases across 3 projects over a duration of 3 months.</li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="education" id="education">
+        <div class="educationTitle">Education</div>
+        <div class="educationContainer timeline">
+          <!-- Education Card 1 - Master's -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="educationCard">
+              <div class="educationCardHeader">
+                <div class="educationCardHeaderTop">
+                  <div class="educationCardTitle">MS in Computer Science</div>
+                  <div class="dateRange">2023 – 2025</div>
+                </div>
+                <div class="educationCardHeaderBottom">
+                  <div class="universityName">Northeastern University</div>
+                </div>
+              </div>
+              <div class="educationCardBody">
+                <ul>
+                  <li><strong>Location:</strong> Boston, Massachusetts</li>
+                  <li><strong>Relevant Coursework:</strong> Algorithms, Data Structures and Algorithms, Database Management Systems, Object Oriented Design (Java), Human Computer Interaction</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Card 2 - Bachelor's -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="educationCard">
+              <div class="educationCardHeader">
+                <div class="educationCardHeaderTop">
+                  <div class="educationCardTitle">B.Tech in Telecommunication Engineering</div>
+                  <div class="dateRange">2018 – 2022</div>
+                </div>
+                <div class="educationCardHeaderBottom">
+                  <div class="universityName">BMS Institute of Technology</div>
+                </div>
+              </div>
+              <div class="educationCardBody">
+                <ul>
+                  <li><strong>Location:</strong> Bangalore, Karnataka, India</li>
+                  <li><strong>Relevant Coursework:</strong> Introduction to Python, Digital Communication, Signal Processing, Network Theory</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact" id="contact">
+        <div class="contactTitle">Get in Touch</div>
+        <div class="contactContent">
+          <p class="contactSubtitle">Based in Boston, Massachusetts. I'd love to hear from you!</p>
+          <p class="contactHint">Use the floating buttons on the right to connect with me.</p>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Floating Action Buttons -->
+  <div class="fab-container">
+    <a href="https://linkedin.com/in/-neerajkumar-" target="_blank" class="fab-button" title="LinkedIn">
+      <img src="resources/linkedin.png" alt="LinkedIn" class="fab-icon">
+      <span class="fab-label">LinkedIn</span>
+    </a>
+    <a href="https://github.com/neera-jk" target="_blank" class="fab-button" title="GitHub">
+      <img src="resources/github.png" alt="GitHub" class="fab-icon">
+      <span class="fab-label">GitHub</span>
+    </a>
+    <a href="resources/Neeraj_Kumar_Resume.pdf" target="_blank" class="fab-button" title="Resume">
+      <img src="resources/resume.png" alt="Resume" class="fab-icon">
+      <span class="fab-label">Resume</span>
+    </a>
+    <a href="https://link.springer.com/chapter/10.1007/978-3-031-13577-4_13" target="_blank" class="fab-button" title="Publication">
+      <img src="resources/researchPaper.png" alt="Publication" class="fab-icon">
+      <span class="fab-label">Publication</span>
+    </a>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Neeraj Kumar</p>
+    <p>&copy; 2026 Neeraj Kumar</p>
   </footer>
 
   <!-- Bootstrap JS -->
