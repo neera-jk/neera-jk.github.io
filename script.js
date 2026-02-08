@@ -3,6 +3,51 @@ const themeToggle = document.getElementById('themeToggle');
 const htmlElement = document.documentElement;
 const body = document.body;
 
+// ===================== TIMELINE DATE FORMATTING =====================
+function formatTimelineDate(dateStr) {
+  // Handle year-only format (e.g., "2023")
+  if (/^\d{4}$/.test(dateStr)) {
+    return dateStr;
+  }
+  
+  // Handle YYYY-MM format (e.g., "2024-05")
+  if (/^\d{4}-\d{2}$/.test(dateStr)) {
+    const [year, month] = dateStr.split('-');
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[parseInt(month) - 1]} ${year}`;
+  }
+  
+  // Handle "present" or "current"
+  if (dateStr.toLowerCase() === 'present' || dateStr.toLowerCase() === 'current') {
+    return 'Present';
+  }
+  
+  return dateStr;
+}
+
+function populateTimelineDates() {
+  const timelineItems = document.querySelectorAll('.timeline-item[data-start]');
+  
+  timelineItems.forEach(item => {
+    const startDate = item.dataset.start;
+    const endDate = item.dataset.end;
+    const dateElement = item.querySelector('.timeline-date');
+    
+    if (dateElement && startDate) {
+      const formattedStart = formatTimelineDate(startDate);
+      const formattedEnd = endDate ? formatTimelineDate(endDate) : 'Present';
+      
+      // Create structured date display: start date, "to", end date
+      dateElement.innerHTML = `
+        <span class="date-start">${formattedStart}</span>
+        <span class="date-separator">to</span>
+        <span class="date-end">${formattedEnd}</span>
+      `;
+    }
+  });
+}
+
 // Load theme preference from localStorage
 function loadThemePreference() {
   const savedTheme = localStorage.getItem('theme');
@@ -26,8 +71,11 @@ themeToggle.addEventListener('click', () => {
   themeToggle.textContent = isLightMode ? '☀️' : '🌙';
 });
 
-// Load theme on page load
-document.addEventListener('DOMContentLoaded', loadThemePreference);
+// Load theme and populate dates on page load
+document.addEventListener('DOMContentLoaded', () => {
+  loadThemePreference();
+  populateTimelineDates();
+});
 
 // ===================== SMOOTH SCROLL NAVIGATION =====================
 const navLinks = document.querySelectorAll('.custom-nav-link');
